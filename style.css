@@ -12,10 +12,6 @@
     line-height: 1.5;
 }
 
-button {
-   
-}
-
 /* Main styles */
 /* Welcome Page */
 body {
@@ -58,11 +54,36 @@ body {
     padding-top: 20px;
     width: 75%;
     margin: 20px auto;
-    height: 75vh;
+    height: 500px;
 }
 
 #number-selector {
     width: 50px;
+    margin: 0 auto;
+}
+
+#first-roll-btn {
+    margin: 40px auto;
+}
+
+#dice-result {
+    position: relative;
+    width: 200px;
+}
+
+#dice-images {
+    border: 2px solid red;
+    position: relative;
+    margin: 10px auto;
+    height: 350px;
+    width: 500px;
+}
+
+
+
+#dice-images img {
+    width: 150px;
+    margin: ;
 }
 
 /* End of Game Page */
