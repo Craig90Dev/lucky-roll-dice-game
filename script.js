@@ -1,4 +1,29 @@
-// Roll Dice
+let welcomePage = document.getElementById('welcome-page');
+let gamePage = document.getElementById('game-page');
+let endOfGamePage = document.getElementById('end-of-game');
+let rollButton = document.getElementById('first-roll-btn');
+let higherButton = document.getElementById('higher-btn');
+let lowerButton = document.getElementById('lower-btn');
+let numberLabel = document.getElementById('number-label');
+let numberSelector = document.getElementById('number-selector');
+
+//Start Game Function
+function startGame() {
+  welcomePage.classList.add("hide");
+  gamePage.classList.remove("hide");
+}
+//First roll function
+function firstRoll() {
+  numberLabel.classList.add("hide");
+  numberSelector.classList.add("hide");
+  rollButton.classList.add('hide');
+  higherButton.classList.remove("hide");
+  lowerButton.classList.remove("hide");
+
+  rollDice();
+}
+
+// Roll Dice Function
 function rollDice() {
   //Takes the number from the user input for # of dice.
   const numOfDice = document.getElementById("number-selector").value;
@@ -22,3 +47,4 @@ function rollDice() {
   //Using the dice-images div, display the appropriate dice images
   diceImages.innerHTML = images.join('');
 }
+
