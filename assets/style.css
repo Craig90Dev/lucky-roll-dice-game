@@ -13,10 +13,7 @@
 }
 
 button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: inherit;
+   
 }
 
 /* Main styles */
@@ -58,9 +55,14 @@ body {
 
 #game-page {
     border: 2px solid black;
+    padding-top: 20px;
     width: 75%;
     margin: 20px auto;
     height: 75vh;
+}
+
+#number-selector {
+    width: 50px;
 }
 
 /* End of Game Page */
@@ -92,6 +94,8 @@ footer {
     border-radius: 5px;
     width: 100px;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
 }
 
 .btn:hover {
@@ -104,6 +108,15 @@ footer {
 
 .container {
     border-radius: 15px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .hide {
