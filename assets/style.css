@@ -1,3 +1,5 @@
+/* Generic Style */
+
 *,
 *::before,
 *::after {
@@ -17,6 +19,8 @@ button {
     color: inherit;
 }
 
+/* Main styles */
+/* Welcome Page */
 body {
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -50,6 +54,21 @@ body {
     margin-top: 3rem;
 }
 
+/* Game Page */
+
+/* End of Game Page */
+
+/* Footer */
+
+footer {
+    margin: 5px auto;
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 /* Utility classes */
 
 .btn {
@@ -76,3 +95,5 @@ body {
 .hide {
     display: none;
 }
+
+/* Media Queries for responsivness */
