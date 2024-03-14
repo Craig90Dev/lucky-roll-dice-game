@@ -23,19 +23,27 @@
   </header>
   <main>
     <!-- Container for Welcome Page -->
-    <div id="welcome-page" class="welcome-page ">
+    <div id="welcome-page" class="welcome-page hide">
       <h2 class="welcome-page__slogan container">Fancy your luck?</h2>
         <div>
           <p class="welcome-page__description container">
             Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!    
           </p>
         </div>
-      <button id="start-btn" class="btn">Start</button>
+      <button id="start-btn" class="btn" onclick="startGame()">Start</button>
     </div>
     <!-- Container for Game Section -->
     <!-- Images from:  https://icon-icons.com/ -->
-    <div id="game-page" class="game-page container hide">
-      <p>game</p>
+    <div id="game-page" class="game-page container ">
+      <label for="number-selector"># of Dice: </label>
+      <input id="number-selector" type="number" min="1" max="6" value="1">
+      <button id="roll-btn" class="btn" onclick="rollDice()">Roll Dice</button>
+      <div id="dice-result">
+
+      </div>
+      <div id="dice-images">
+
+      </div>
     </div>
     <!-- Container for End of Game Section -->
     <div id="end-of-game" class="end-of-game container hide">
