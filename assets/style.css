@@ -19,4 +19,56 @@ button {
 
 body {
     font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.title {
+    border: 2px solid black;
+    width: 80%;
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 2.5rem;
+}
+
+.welcome-page__slogan {
+    border: 2px solid black;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.welcome-page__description {
+    border: 1px solid black;
+    width: 40%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+#start-btn {
+    margin-top: 3rem;
+}
+
+/* Utility classes */
+
+.btn {
+    border: 3px solid none;
+    padding: 5px 10px;
+    background-color: hsl(0, 0%, 50%);
+    border-radius: 5px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 70%);;
+}
+
+.btn:active {
+    background-color: hsl(0, 0%, 90%);;
+}
+
+.container {
+    border-radius: 15px;
 }
