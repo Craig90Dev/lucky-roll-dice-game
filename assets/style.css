@@ -56,6 +56,12 @@ body {
 
 /* Game Page */
 
+#game-page {
+    border: 2px solid black;
+    width: 75%;
+    margin: 20px auto;
+    height: 75vh;
+}
 /* End of Game Page */
 
 /* Footer */
