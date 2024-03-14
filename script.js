@@ -1,6 +1,7 @@
 let welcomePage = document.getElementById('welcome-page');
 let gamePage = document.getElementById('game-page');
 let endOfGamePage = document.getElementById('end-of-game');
+let resetButton = document.getElementById('reset-btn');
 let rollButton = document.getElementById('first-roll-btn');
 let higherButton = document.getElementById('higher-btn');
 let lowerButton = document.getElementById('lower-btn');
@@ -12,15 +13,28 @@ function startGame() {
   welcomePage.classList.add("hide");
   gamePage.classList.remove("hide");
 }
-//First roll function
+
+//First roll Function
 function firstRoll() {
   numberLabel.classList.add("hide");
   numberSelector.classList.add("hide");
   rollButton.classList.add('hide');
   higherButton.classList.remove("hide");
   lowerButton.classList.remove("hide");
+  resetButton.classList.remove("hide");
 
   rollDice();
+}
+
+//Reset Function
+function resetGame() {
+  welcomePage.classList.remove("hide");
+  gamePage.classList.add("hide");
+  higherButton.classList.add("hide");
+  lowerButton.classList.add("hide");
+  rollButton.classList.remove('hide');
+  numberLabel.classList.remove("hide");
+  numberSelector.classList.remove("hide");
 }
 
 // Roll Dice Function
@@ -43,7 +57,7 @@ function rollDice() {
     images.push(`<img src="assets/images/${value}.png" alt="Number ${value}">`);
   }
   //Using the dice-result div, display the results of the roll
-  diceResult.textContent = `Dice: ${values.join(', ')}`;
+  diceResult.textContent = `Dice: ${values.join(' + ')}`;
   //Using the dice-images div, display the appropriate dice images
   diceImages.innerHTML = images.join('');
 }

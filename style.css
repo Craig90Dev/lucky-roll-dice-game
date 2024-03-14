@@ -36,15 +36,12 @@ body {
 }
 
 .welcome-page__description {
-    border: 1px solid black;
-    width: 40%;
+    border: 2px solid black;
+    padding-top: 20px;
+    width: 75%;
     margin: 20px auto;
-    padding: 10px 20px;
+    height: 500px;
     font-size: 1.5rem;
-}
-
-#start-btn {
-    margin-top: 3rem;
 }
 
 /* Game Page */

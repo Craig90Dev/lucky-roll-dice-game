@@ -23,28 +23,29 @@
   </header>
   <main>
     <!-- Container for Welcome Page -->
-    <div id="welcome-page" class="welcome-page hide">
+    <div id="welcome-page" class="welcome-page ">
       <h2 class="welcome-page__slogan container">Fancy your luck?</h2>
         <div>
-          <p class="welcome-page__description container">
-            Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!    
-          </p>
+          <p class="welcome-page__description container">Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!</p>
+          <button id="start-btn" class="btn" onclick="startGame()">Start</button>
         </div>
-      <button id="start-btn" class="btn" onclick="startGame()">Start</button>
     </div>
     <!-- Container for Game Section -->
     <!-- Images from:  https://icon-icons.com/ -->
-    <div id="game-page" class="game-page container ">
-      <label for="number-selector"># of Dice: </label>
-      <input id="number-selector" type="number" min="1" max="6" value="1">
-      <button id="higher-btn" class="btn" onclick="rollDice()">Higher</button>
-      <button id="lower-btn" class="btn" onclick="rollDice()">Lower</button>
-      <div id="dice-result">
-
-      </div>
-      <div id="dice-images">
-
-      </div>
+    <div id="game-page" class="game-page container hide">
+      <div id="dice-result"></div>
+      <div id="dice-images"></div>
+      <label id="number-label" for="number-selector" class=""># of Dice: </label>
+      <input id="number-selector" class="" type="number" min="1" max="6" value="1">
+        <div id="first-roll-btn" class="">
+          <button id="first-roll-btn" class="btn" onclick="firstRoll()">Roll</button>
+        </div>
+        <div id="higher-lower-btns">
+          <button id="higher-btn" class="btn hide" onclick="rollDice()">Higher</button>
+          <button id="lower-btn" class="btn hide" onclick="rollDice()">Lower</button>
+        </div>
+        <button id="reset-btn" class="btn hide" onclick="resetGame()">Reset</button>
+      
     </div>
     <!-- Container for End of Game Section -->
     <div id="end-of-game" class="end-of-game container hide">
