@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <!-- Fav Icon -->
-  
+  <link type="image/png" sizes="16x16" rel="icon" href="assets/images/favicon/icons8-dice-16.png">
+  <link type="image/png" sizes="32x32" rel="icon" href="assets/images/favicon/icons8-dice-32.png">
+  <link type="image/png" sizes="96x96" rel="icon" href="assets/images/favicon/icons8-dice-96.png">
   <!-- Title -->
   <title>Lucky Roll Dice Game</title>
 </head>
@@ -26,14 +28,17 @@
     <div id="welcome-page" class="welcome-page ">
       <h2 class="welcome-page__slogan container">Fancy your luck?</h2>
         <div>
-          <p class="welcome-page__description container">Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!</p>
+          <p class="welcome-page__description container">
+            Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!
+            To change the number of dice, press the Reset button. Be careful though, your score will be lost!
+          </p>
           <button id="start-btn" class="btn" onclick="startGame()">Start</button>
         </div>
     </div>
     <!-- Container for Game Section -->
-    <!-- Images from:  https://icon-icons.com/ -->
     <div id="game-page" class="game-page container hide">
       <div id="dice-result"></div>
+      <!-- Images from:  https://icon-icons.com/ -->
       <div id="dice-images"></div>
       <label id="number-label" for="number-selector" class=""># of Dice: </label>
       <input id="number-selector" class="" type="number" min="1" max="6" value="1">
@@ -44,17 +49,18 @@
           <button id="higher-btn" class="btn hide" onclick="rollDice()">Higher</button>
           <button id="lower-btn" class="btn hide" onclick="rollDice()">Lower</button>
         </div>
-        <button id="reset-btn" class="btn hide" onclick="resetGame()">Reset</button>
-      
+      <button id="reset-btn" class="btn hide" onclick="resetGame()">Reset</button>  
     </div>
     <!-- Container for End of Game Section -->
     <div id="end-of-game" class="end-of-game container hide">
-      <p>end game</p>
+      <p id="high-scores" class="end-of-game__description">
+        
+      </p>
     </div>
   </main>
   <footer>
     <p>Copyright Craig90Dev</p>
   </footer>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
