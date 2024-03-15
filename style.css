@@ -27,10 +27,17 @@ body {
     font-size: 2.5rem;
 }
 
+#welcome-page-container {
+    width: 75%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
 .welcome-page__slogan {
     border: 2px solid black;
-    width: 60%;
-    margin: 20px auto;
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
     padding: 10px;
     font-size: 2rem;
 }
@@ -38,49 +45,83 @@ body {
 .welcome-page__description {
     border: 2px solid black;
     padding-top: 20px;
-    width: 75%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 20px auto 0;
     height: 500px;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    line-height: 2;
+}
+
+#start-btn {
+    margin: 10px auto;
 }
 
 /* Game Page */
 
-#game-page {
+#game-page-container {
     border: 2px solid black;
-    padding-top: 20px;
     width: 75%;
+    height: 590px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+}
+
+.game-page__info {
+    border: 2px solid black;
+    width: 1142px;
+    height: 70px;
     margin: 20px auto;
-    height: 500px;
+    padding: 10px;
+    font-size: 2rem;
 }
 
 #number-selector {
+    border: none;
     width: 50px;
     margin: 0 auto;
 }
 
 #first-roll-btn {
-    margin: 40px auto;
+    margin: 10px auto;
 }
 
-#dice-result {
-    position: relative;
+#dice-result,
+#dice-total {
+    margin: 5px auto;
     width: 200px;
+    font-weight: bold;
 }
 
 #dice-images {
-    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     position: relative;
-    margin: 10px auto;
+    margin: 0 auto;
     height: 350px;
     width: 500px;
 }
 
-
-
 #dice-images img {
     width: 150px;
-    margin: ;
+    height: 150px;   
+}
+
+#higher-btn,
+#lower-btn {
+    margin: 0 1rem;
+}
+
+#reset-btn {
+    margin: 10px auto;
 }
 
 /* End of Game Page */
