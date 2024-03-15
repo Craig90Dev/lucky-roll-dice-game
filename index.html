@@ -24,33 +24,45 @@
     <h1 class="title container">Lucky Roll Dice Game</h1>
   </header>
   <main>
+
     <!-- Container for Welcome Page -->
     <div id="welcome-page" class="welcome-page ">
-      <h2 class="welcome-page__slogan container">Fancy your luck?</h2>
-        <div>
-          <p class="welcome-page__description container">
-            Select a number of dice to roll and guess higher or lower. The more correct answers, the more points! Try and get your highscore!
-            To change the number of dice, press the Reset button. Be careful though, your score will be lost!
-          </p>
-          <button id="start-btn" class="btn" onclick="startGame()">Start</button>
+      <div id="welcome-page-container">
+        <h2 class="welcome-page__slogan container">Fancy your luck?</h2>
+        <div class="welcome-page__description container">
+          <ol>
+            <li>Select a number of dice to roll</li>
+            <li>Guess if the next roll will be higher or lower than the previous roll</li>
+            <li>Each correct answer gives you a point to your current streak</li>
+            <li>If you get it wrong you will lose your streak</li>
+            <li>Click reset to change the number of dice</li>
+            <li>Try and get the highest streak!</li>
+          </ol>
         </div>
+        <button id="start-btn" class="btn" onclick="startGame()">Start</button>
+      </div>
     </div>
+
     <!-- Container for Game Section -->
     <div id="game-page" class="game-page container hide">
-      <div id="dice-result"></div>
-      <!-- Images from:  https://icon-icons.com/ -->
-      <div id="dice-images"></div>
-      <label id="number-label" for="number-selector" class=""># of Dice: </label>
-      <input id="number-selector" class="" type="number" min="1" max="6" value="1">
+      <div id="game-page-container">
+        <div id="dice-result"></div>
+        <div id="dice-total"></div>
+        <!-- Images from:  https://icon-icons.com/ -->
+        <div id="dice-images"></div>
+        <label id="number-label" for="number-selector" class=""># of Dice: </label>
+        <input id="number-selector" class="" type="number" min="1" max="6" value="1">
         <div id="first-roll-btn" class="">
           <button id="first-roll-btn" class="btn" onclick="firstRoll()">Roll</button>
         </div>
         <div id="higher-lower-btns">
-          <button id="higher-btn" class="btn hide" onclick="rollDice()">Higher</button>
           <button id="lower-btn" class="btn hide" onclick="rollDice()">Lower</button>
+          <button id="higher-btn" class="btn hide" onclick="rollDice()">Higher</button>
         </div>
+      </div>
       <button id="reset-btn" class="btn hide" onclick="resetGame()">Reset</button>  
     </div>
+
     <!-- Container for End of Game Section -->
     <div id="end-of-game" class="end-of-game container hide">
       <p id="high-scores" class="end-of-game__description">

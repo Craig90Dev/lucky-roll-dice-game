@@ -35,15 +35,19 @@ function resetGame() {
   rollButton.classList.remove('hide');
   numberLabel.classList.remove("hide");
   numberSelector.classList.remove("hide");
+  document.getElementById("dice-result").innerHTML = "";
+  document.getElementById("dice-total").innerHTML = "";
+  document.getElementById("dice-images").innerHTML = "";
 }
 
 // Roll Dice Function
 function rollDice() {
-  //Takes the number from the user input for # of dice.
+  //Takes the number from the user input value for # of dice.
   const numOfDice = document.getElementById("number-selector").value;
   // Variables for the result and image divs.
   const diceResult = document.getElementById("dice-result");
   const diceImages = document.getElementById("dice-images");
+  const diceTotal = document.getElementById("dice-total");
   // Empty arrays to store dice values and images.
   const values = [];
   const images = [];
@@ -57,7 +61,14 @@ function rollDice() {
     images.push(`<img src="assets/images/${value}.png" alt="Number ${value}">`);
   }
   //Using the dice-result div, display the results of the roll
-  diceResult.textContent = `Dice: ${values.join(' + ')}`;
+  diceResult.textContent = `Dice: ${values.join(', ')}`;
+  //Use values array to take numbers and add together for dice total
+  let sumOf = 0;
+  for (let i = 0; i < values.length; i++) {
+    sumOf += values[i];
+  }
+  //Display the sumOf variable in the dice-total div
+  diceTotal.textContent = `Total: ${(sumOf)}`;
   //Using the dice-images div, display the appropriate dice images
   diceImages.innerHTML = images.join('');
 }
