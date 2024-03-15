@@ -46,8 +46,8 @@
     <!-- Container for Game Section -->
     <div id="game-page" class="game-page container hide">
       <div id="game-page-container">
-        <div id="dice-result"></div>
-        <div id="dice-total"></div>
+        <div id="dice-result" class=""></div>
+        <div id="dice-total" class=""></div>
         <!-- Images from:  https://icon-icons.com/ -->
         <div id="dice-images"></div>
         <label id="number-label" for="number-selector" class=""># of Dice: </label>
@@ -59,15 +59,12 @@
           <button id="lower-btn" class="btn hide" onclick="rollDice()">Lower</button>
           <button id="higher-btn" class="btn hide" onclick="rollDice()">Higher</button>
         </div>
+        <div id="score-area">
+          <p>Current Streak: <span id="current-streak-score">0</span></p>
+          <p>Best Streak: <span id="best-streak-score">0</span></p>
+        </div>
       </div>
       <button id="reset-btn" class="btn hide" onclick="resetGame()">Reset</button>  
-    </div>
-
-    <!-- Container for End of Game Section -->
-    <div id="end-of-game" class="end-of-game container hide">
-      <p id="high-scores" class="end-of-game__description">
-        
-      </p>
     </div>
   </main>
   <footer>

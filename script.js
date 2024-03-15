@@ -1,6 +1,5 @@
 let welcomePage = document.getElementById('welcome-page');
 let gamePage = document.getElementById('game-page');
-let endOfGamePage = document.getElementById('end-of-game');
 let resetButton = document.getElementById('reset-btn');
 let rollButton = document.getElementById('first-roll-btn');
 let higherButton = document.getElementById('higher-btn');
@@ -19,6 +18,7 @@ function firstRoll() {
   numberLabel.classList.add("hide");
   numberSelector.classList.add("hide");
   rollButton.classList.add('hide');
+  
   higherButton.classList.remove("hide");
   lowerButton.classList.remove("hide");
   resetButton.classList.remove("hide");
