@@ -1,11 +1,26 @@
-let welcomePage = document.getElementById('welcome-page');
-let gamePage = document.getElementById('game-page');
-let resetButton = document.getElementById('reset-btn');
-let rollButton = document.getElementById('first-roll-btn');
-let higherButton = document.getElementById('higher-btn');
-let lowerButton = document.getElementById('lower-btn');
-let numberLabel = document.getElementById('number-label');
-let numberSelector = document.getElementById('number-selector');
+//Global Variables
+const welcomePage = document.getElementById('welcome-page');
+const gamePage = document.getElementById('game-page');
+const resetButton = document.getElementById('reset-btn');
+const rollButton = document.getElementById('first-roll-btn');
+const higherButton = document.getElementById('higher-btn');
+const lowerButton = document.getElementById('lower-btn');
+const numberLabel = document.getElementById('number-label');
+const numberSelector = document.getElementById('number-selector');
+const startButton = document.getElementById('start-btn');
+
+//Checks the DOM content has loaded
+document.addEventListener("DOMContentLoaded", function() {
+  initialiseEventListeners();
+});
+
+function initialiseEventListeners() {
+  startButton.addEventListener("click", startGame);
+  rollButton.addEventListener("click", firstRoll);
+  higherButton.addEventListener("click", rollDice)
+  lowerButton.addEventListener("click", rollDice)
+  resetButton.addEventListener("click", resetGame);
+}
 
 //Start Game Function
 function startGame() {
@@ -17,8 +32,7 @@ function startGame() {
 function firstRoll() {
   numberLabel.classList.add("hide");
   numberSelector.classList.add("hide");
-  rollButton.classList.add('hide');
-  
+  rollButton.classList.add('hide');  
   higherButton.classList.remove("hide");
   lowerButton.classList.remove("hide");
   resetButton.classList.remove("hide");
@@ -42,8 +56,8 @@ function resetGame() {
 
 // Roll Dice Function
 function rollDice() {
-  //Takes the number from the user input value for # of dice.
-  const numOfDice = document.getElementById("number-selector").value;
+  //Takes the number from the user input value for # of dice using parseInt to change to a number instead of string.
+  const numOfDice = parseInt(document.getElementById("number-selector").value);
   // Variables for the result and image divs.
   const diceResult = document.getElementById("dice-result");
   const diceImages = document.getElementById("dice-images");
@@ -72,4 +86,6 @@ function rollDice() {
   //Using the dice-images div, display the appropriate dice images
   diceImages.innerHTML = images.join('');
 }
-
+  
+function displayRolledDice() {
+}
