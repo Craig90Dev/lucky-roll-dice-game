@@ -28,6 +28,14 @@ body {
 #welcome-page-description {
   font-size: 1rem;
   width: 70%;
+  height: 350px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#start-btn {
+  margin: 90px auto;
 }
 
 /* Utility styles */
@@ -36,6 +44,7 @@ body {
   border: 2px solid black;
   border-radius: 15px;
   margin: 20px auto;
+  padding: 10px 20px;
 }
 
 button {
@@ -64,3 +73,6 @@ li {
   list-style: none;
   line-height: 2;
 }
+
+/* Media Queries */
+
