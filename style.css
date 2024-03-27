@@ -18,9 +18,13 @@ button {
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Open-Sans", sans-serif;
+    text-align: center;
 }
 
-body {
-  background-color: blue;
+.title {
+  border: 2px solid black;
+  width: 90%;
+  border-radius: 15px;
+  margin: 20px auto;
 }
