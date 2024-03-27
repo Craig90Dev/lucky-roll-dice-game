@@ -40,6 +40,8 @@ function startGame() {
 function resetGame() {
   welcomePage.classList.remove("hide");
   gamePage.classList.add("hide");
+  document.getElementById("score").innerText = 0;
+  score = 0;
 }
 
 for (let i = 0; i < higherLowerBtns.length; i++) {
@@ -74,9 +76,10 @@ function correctAnswer() {
   // Correct Answer and score update
   score++;
   scoreElem.innerText = score;
+  resultElem.classList.remove("hide")
   resultElem.innerText = "Correct!"
-  resultElem.classList.add("correct");
-  resultElem.classList.remove("hide");
+  resultElem.style.color = "BLUE";
+
   timeoutFunction();
 }
 
@@ -84,10 +87,9 @@ function incorrectAnswer() {
   // Incorrect answer and score reset
   score = 0;
   scoreElem.innerText = score;
-
+  resultElem.classList.remove("hide")
   resultElem.innerText = "Incorrect!"
-  resultElem.classList.add("incorrect");
-  resultElem.classList.remove("hide");
+  resultElem.style.color = "RED";
   timeoutFunction();
 }
 //Timeout function for results div to fade out

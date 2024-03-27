@@ -87,18 +87,10 @@ body {
 
 /* hidden result classes */
 
-#result {
+#result-area {
   margin: auto;
   font-size: 2rem;
   transition: all 0.5s linear;
-}
-
-.correct {
-  color: blue;
-}
-
-.incorrect {
-  color: red;
 }
 
 /* Footer section */
