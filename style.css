@@ -23,6 +23,8 @@ body {
   width: 90%;
 }
 
+/* Welcome Page */
+
 #welcome-page-slogan {
   font-size: 1.5rem;
   font-weight: 600;
@@ -43,6 +45,40 @@ body {
   margin: 90px auto;
 }
 
+/* Game Page */
+
+#game-page-container {
+  border: 2px solid black;
+  width: 75%;
+  height: 430px;
+  margin: 20px auto 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#dice-images {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  margin: 50px auto;
+  height: 200px;
+  width: 200px;
+}
+
+#higher-btn,
+#lower-btn {
+  margin: 10px 40px;
+}
+
+#reset-btn {
+  margin: 30px auto;
+}
+
+/* Footer section */
 footer {
   position: absolute;
   bottom: 0;
@@ -84,6 +120,10 @@ button:active {
 li {
   list-style: none;
   line-height: 2;
+}
+
+.hide {
+  display: none;
 }
 
 /* Media Queries */
