@@ -42,7 +42,7 @@ body {
 }
 
 #start-btn {
-  margin: 90px auto;
+  margin: 103px auto;
 }
 
 /* Game Page */
@@ -50,7 +50,7 @@ body {
 #game-page-container {
   border: 2px solid black;
   width: 70%;
-  height: 430px;
+  height: 500px;
   margin: 20px auto 0;
   border-radius: 15px;
   display: flex;
@@ -65,8 +65,8 @@ body {
   align-items: center;
   position: relative;
   margin: 50px auto;
-  height: 200px;
-  width: 200px;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 #higher-btn,
@@ -74,8 +74,31 @@ body {
   margin: 10px 40px;
 }
 
+.score-streak-label {
+  width: 120px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+
 #reset-btn {
-  margin: 30px auto;
+  margin: 20px auto;
+}
+
+/* hidden result classes */
+
+#result {
+  margin: auto;
+  font-size: 2rem;
+  transition: all 0.5s linear;
+}
+
+.correct {
+  color: blue;
+}
+
+.incorrect {
+  color: red;
 }
 
 /* Footer section */

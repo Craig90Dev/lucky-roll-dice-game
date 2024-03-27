@@ -45,11 +45,16 @@
       <div id="game-page-container">
        <div id="dice-images"></div>
        <div id="higher-lower-btns">
-         <button id="lower-btn">Lower</button>
-         <button id="higher-btn">Higher</button>
+         <button id="lower-btn" class="higher-lower-btn" data-value="lower">Lower</button>
+         <button id="higher-btn" class="higher-lower-btn" data-value="higher">Higher</button>
        </div>
-       <button id="reset-btn">Reset</button>
+       <h3 class="score-streak-label">Score: </h3>
+       <div id="score">0</div>
+       <h3 class="score-streak-label">Streak: </h3>
+       <div id="streak">0</div>
+       <h4 id="result" class="hide">Correct</h4>
       </div>
+      <button id="reset-btn">Reset</button>
     </div>
   </main>
   <footer>
