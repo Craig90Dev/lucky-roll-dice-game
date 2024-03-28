@@ -6,8 +6,10 @@ const resetButton = document.getElementById("reset-btn");
 const currentElem = document.getElementById("dice-images");
 const higherLowerBtns = document.getElementsByClassName("higher-lower-btn");
 const resultElem = document.getElementById("result-area");
-let scoreElem = document.getElementById("score") 
+let scoreElem = document.getElementById("score");
+let streakElem = document.getElementById("streak");
 
+let streak = 0;
 let score = 0;
 let currentNumber = generateRandomDice();
 currentElem.innerText = currentNumber;
@@ -40,8 +42,11 @@ function startGame() {
 function resetGame() {
   welcomePage.classList.remove("hide");
   gamePage.classList.add("hide");
-  document.getElementById("score").innerText = 0;
+  //Reset score and streak to 0
+  scoreElem.innerText = 0;
   score = 0;
+  streakElem.innerText = 0;
+  streak = 0;
 }
 
 for (let i = 0; i < higherLowerBtns.length; i++) {
@@ -83,7 +88,11 @@ function correctAnswer() {
 }
 
 function incorrectAnswer() {
-  // Incorrect answer and score reset
+  // Incorrect answer and best streak counter
+  if (score > streak) {
+    streakElem.innerText = score;
+  }
+  //score reset
   score = 0;
   scoreElem.innerText = score;
   resultElem.classList.remove("hide")
