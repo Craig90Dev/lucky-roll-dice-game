@@ -3,7 +3,7 @@ const startButton = document.getElementById("start-btn");
 const welcomePage = document.getElementById("welcome-page");
 const gamePage = document.getElementById("game-page");
 const resetButton = document.getElementById("reset-btn");
-const currentElem = document.getElementById("dice-images");
+const currentElem = document.getElementById("dice-number");
 const higherLowerBtns = document.getElementsByClassName("higher-lower-btn");
 const resultElem = document.getElementById("result-area");
 let scoreElem = document.getElementById("score");
@@ -13,6 +13,8 @@ let streak = 0;
 let score = 0;
 let currentNumber = generateRandomDice();
 currentElem.innerText = currentNumber;
+document.getElementById("dice-images").innerHTML = `<img src="assets/images/${currentNumber}.png" alt="Number ${currentNumber}">`;
+
 
 // Checks DOM content has loaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -47,6 +49,10 @@ function resetGame() {
   score = 0;
   streakElem.innerText = 0;
   streak = 0;
+  //Generate new number on reset and display appropriate dice image
+  let currentNumber = generateRandomDice();
+  currentElem.innerText = currentNumber;
+  document.getElementById("dice-images").innerHTML = `<img src="assets/images/${currentNumber}.png" alt="Number ${currentNumber}">`;
 }
 
 for (let i = 0; i < higherLowerBtns.length; i++) {
@@ -57,14 +63,17 @@ for (let i = 0; i < higherLowerBtns.length; i++) {
 
 function playGame(choice) {
   // Generate new number for comparison
-  const currentNumber = parseInt(document.getElementById("dice-images").innerText); // parseInt to ensure is a number
+  const currentNumber = parseInt(document.getElementById("dice-number").innerText); // parseInt to ensure is a number
   let newNumber = generateRandomDice();
   //Ensures new and old numbers are not the same
   while (newNumber === currentNumber) {
     newNumber = generateRandomDice();
   }
   //Update new number in images box
-  document.getElementById("dice-images").innerHTML = newNumber;
+  parseInt(document.getElementById("dice-number").innerHTML = newNumber);
+
+  //Uses generated number to call for image from assets folder and display in dice images div
+  document.getElementById("dice-images").innerHTML = `<img src="assets/images/${newNumber}.png" alt="Number ${newNumber}">`;
 
   checkAnswer();
   //Check if players answer is correct
@@ -89,7 +98,7 @@ function correctAnswer() {
 
 function incorrectAnswer() {
   // Incorrect answer and best streak counter
-  if (score > streak) {
+  if (scoreElem.innerText > streakElem.innerText) {
     streakElem.innerText = score;
   }
   //score reset

@@ -58,15 +58,13 @@ body {
 }
 
 #dice-images {
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
   margin: 50px auto;
-  min-height: 200px;
-  min-width: 200px;
+  width: 150px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
 }
 
 #higher-btn,
