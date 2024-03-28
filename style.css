@@ -72,12 +72,23 @@ img {
   margin: 10px 40px;
 }
 
-.score-streak-label {
-  width: 120px;
+#score-area {
+  width: 300px;
   margin: 0 auto;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
+.score-streak-label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.score-streak {
+  margin: 0 10px;
+  font-weight: 400;
+}
 
 #reset-btn {
   margin: 20px auto;
