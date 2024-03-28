@@ -79,7 +79,6 @@ function correctAnswer() {
   resultElem.classList.remove("hide")
   resultElem.innerText = "Correct!"
   resultElem.style.color = "BLUE";
-
   timeoutFunction();
 }
 
@@ -92,11 +91,16 @@ function incorrectAnswer() {
   resultElem.style.color = "RED";
   timeoutFunction();
 }
-//Timeout function for results div to fade out
+
+// Timeout function for results div to fade out and disable higher/lower buttons to stop player spamming answers and give time for results to fade
 function timeoutFunction() {
+  document.getElementById("higher-btn").disabled = true;
+  document.getElementById("lower-btn").disabled = true;
   setTimeout(function () {
     resultElem.classList.add("hide");
     resultElem.classList.remove("correct");
+    document.getElementById("higher-btn").disabled = false;
+    document.getElementById("lower-btn").disabled = false;
   }, 1000);
 }
 
@@ -104,3 +108,4 @@ function timeoutFunction() {
 function generateRandomDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
+
