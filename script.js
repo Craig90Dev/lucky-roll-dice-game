@@ -66,12 +66,12 @@ function resetGame() {
   let currentNumber1 = generateRandomDice();
   let currentNumber2 = generateRandomDice();
 
-  currentElem1.innerText = currentNumber1;
-  currentElem2.innerText = currentNumber2;
+  parseInt(currentElem1.innerText = currentNumber1);
+  parseInt(currentElem2.innerText = currentNumber2);
 
   let currentTotal = currentNumber1 + currentNumber2;
 
-  document.getElementById("dice-total-score").innerText = currentTotal;
+  parseInt(document.getElementById("dice-total-score").innerText = currentTotal);
 
   document.getElementById("dice-image1").innerHTML = `<img src="assets/images/${currentNumber1}.png" alt="Number ${currentNumber1}">`;
   document.getElementById("dice-image2").innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
