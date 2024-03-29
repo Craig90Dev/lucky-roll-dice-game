@@ -149,6 +149,7 @@ footer {
   width: 100%;
   margin: 5px auto;
   font-size: small;
+  z-index: 100;
 }
 /* Utility styles */
 
