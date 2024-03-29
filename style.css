@@ -50,21 +50,50 @@ body {
 #game-page-container {
   border: 2px solid black;
   width: 70%;
-  height: 500px;
+  height: 430px;
   margin: 20px auto 0;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
 
-#dice-images {
-  margin: 50px auto;
-  width: 150px;
+#dice-image-container {
+  width: 400px;
+  height: 150px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dice-number-container {
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+#dice-total-container {
+  width: 200px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dice-total-score {
+  font-size: 1.3rem;
+  margin-left: 10px;
 }
 
 img {
   height: 150px;
   width: 150px;
+}
+
+#dice-number1,
+#dice-number2 {
+  margin: 0 70px;
 }
 
 #higher-btn,
