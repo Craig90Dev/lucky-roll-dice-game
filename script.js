@@ -77,6 +77,7 @@ function resetGame() {
   document.getElementById("dice-image2").innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
 }
 
+//Starts playGame function when higher or lower button is clicked
 for (let i = 0; i < higherLowerBtns.length; i++) {
   higherLowerBtns[i].addEventListener("click", function() {
     playGame(this.dataset.value);
@@ -128,7 +129,7 @@ function correctAnswer() {
   //Display correct guess message to player
   resultElem.classList.remove("hide")
   resultElem.innerText = "Correct!"
-  resultElem.style.color = "BLUE";
+  resultElem.style.color = "WHITE";
   timeoutFunction();
 }
 
