@@ -13,12 +13,18 @@
 body {
     font-family: "Open-Sans", sans-serif;
     text-align: center;
-    background-image: linear-gradient(rgb(28, 126, 28), hsl(108, 89%, 34%));
+    /* Image from: https://www.pexels.com/photo/brown-wooden-surface-129733/ */
+    background-image:url("assets/images/wooden-background.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow: hidden;
     height: 100vh;
 }
 
 #title {
   font-size: 2.5rem;
+  background: linear-gradient(#1d831d, #082a08);;
+  color: white;
   font-weight: 700;
   width: 90%;
 }
@@ -26,13 +32,16 @@ body {
 /* Welcome Page */
 
 #welcome-page-slogan {
+  background: linear-gradient(#1d831d, #082a08);;
+  color: white;
   font-size: 1.5rem;
   font-weight: 600;
   width: 50%;
 }
 
 #welcome-page-description {
-  font-size: 1rem;
+  background: linear-gradient(#1d831d, #082a08);  font-size: 1rem;
+  color: white;
   font-weight: 600;
   width: 70%;
   height: 350px;
@@ -42,13 +51,15 @@ body {
 }
 
 #start-btn {
-  margin: 103px auto;
+  margin: 10px auto;
 }
 
 /* Game Page */
 
 #game-page-container {
   border: 2px solid black;
+  background: linear-gradient(#1d831d, #082a08);
+  color: white;
   width: 70%;
   height: 430px;
   margin: 20px auto 0;
@@ -58,8 +69,8 @@ body {
 }
 
 #dice-image-container {
-  width: 400px;
-  height: 150px;
+  max-width: 400px;
+  min-height: 150px;
   margin: 30px auto 0;
   display: flex;
   justify-content: center;
@@ -68,7 +79,7 @@ body {
 
 #dice-number-container {
   display: flex;
-  width: 400px;
+  width: 40%;
   justify-content: center;
   margin: 0 auto 20px;
 }
@@ -102,7 +113,7 @@ img {
 }
 
 #score-area {
-  width: 300px;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -156,6 +167,7 @@ button {
     border: 3px solid none;
     padding: 5px 10px;
     background-color: hsl(0, 0%, 70%);
+    color: black;
     border-radius: 5px;
     width: 100px;
     font-weight: bold;
@@ -180,4 +192,101 @@ li {
 }
 
 /* Media Queries */
+/* Mobile Devices */
+@media screen and (max-width: 631px) {
+
+  #title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  
+  #welcome-page-description {
+    height: 600px;
+    width: 80%;
+  }
+  
+  #game-page-container {
+    height: 600px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+
+  /* Welcome Page */
+  #title {
+    font-size: 1.5rem;
+  }
+  
+  #welcome-page-slogan {
+    width: 60%;
+    font-size: 1rem;
+  }
+  
+  #welcome-page-description {
+    width: 80%;
+    height: 600px;
+  }
+  
+  li {
+    line-height: 1.5;
+    margin: 20px auto;
+  }
+
+  #start-btn {
+    margin: 0 auto;
+  }
+  
+  /* Game Page */
+  #game-page-container {
+    width: 80%;
+  }
+  
+  #dice-image-container {
+    flex-direction: column;
+  }
+  
+  #dice-number-container {
+    display: none;
+  }
+
+  #dice-total-score {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  #higher-lower-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #higher-btn {
+    order: 1;
+  }
+
+  #lower-btn {
+    order: 2;
+  }
+ 
+  #score-area {
+    width: 90%;
+  }
+
+  .score-streak-label {
+    font-size: .9rem;
+    margin: auto;
+  }
+
+  #reset-btn {
+    margin: 10px auto;
+  }
+
+  /* Utilities */
+  .container {
+    margin: 10px auto;
+  }
+}
 
