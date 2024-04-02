@@ -87,15 +87,16 @@ for (let i = 0; i < higherLowerBtns.length; i++) {
 }
 
 function playGame(choice) {
-  // Generate new number for comparison
-  const currentNumber1 = parseInt(document.getElementById("dice-number1").innerText); // parseInt to ensure is a number
-  const currentNumber2 = parseInt(document.getElementById("dice-number2").innerText); // parseInt to ensure is a number
+  // Calculate current total
+  const currentNumber1 = parseInt(document.getElementById("dice-number1").value); // parseInt to ensure is a number
+  const currentNumber2 = parseInt(document.getElementById("dice-number2").value); // parseInt to ensure is a number
 
   let currentTotal = currentNumber1 + currentNumber2;
-
+  // Generate new numbers for comparison
   let newNumber1 = generateRandomDice();
   let newNumber2 = generateRandomDice();
- 
+
+ // Calculate new total
   let newTotal = newNumber1 + newNumber2;
 
   //Ensures new and current totals are not the same
