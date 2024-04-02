@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 // Global Variables
 const startButton = document.getElementById("start-btn");
 const welcomePage = document.getElementById("welcome-page");
@@ -117,8 +119,8 @@ function playGame(choice) {
     if((currentTotal < newTotal && choice === "higher") || (currentTotal > newTotal && choice === "lower")) {
       correctAnswer();
     } else {
-      incorrectAnswer()
-    };
+      incorrectAnswer();
+    }
   }
 }
 
@@ -127,8 +129,8 @@ function correctAnswer() {
   score++;
   scoreElem.innerText = score;
   //Display correct guess message to player
-  resultElem.classList.remove("hide")
-  resultElem.innerText = "Correct!"
+  resultElem.classList.remove("hide");
+  resultElem.innerText = "Correct!";
   resultElem.style.color = "WHITE";
   timeoutFunction();
 }
@@ -142,8 +144,8 @@ function incorrectAnswer() {
   score = 0;
   scoreElem.innerText = score;
   //Display incorrect guess message to player
-  resultElem.classList.remove("hide")
-  resultElem.innerText = "Incorrect!"
+  resultElem.classList.remove("hide");
+  resultElem.innerText = "Incorrect!";
   resultElem.style.color = "RED";
   timeoutFunction();
 }
