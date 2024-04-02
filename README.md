@@ -366,6 +366,8 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 | Incorrect Result | Result element to display "Incorrect" message | Forced the answer to be incorrect | Result element displays "Incorrect" message | Pass |
 | Score | Score element to increment by one with each consecutive correct answer, reset to zero on incorrect answer | Played game as normal | Score increased by one for each consecutive correct answer and reset to zero when answer was incorrect | Pass |
 | Best Streak | Best streak to update when score is higher than current best streak | Played game and got scores of three, five and three. | Best streak updated from zero to three, then three to five, then stayed at five | Pass |
+| Dice Total | Dice total element to display the total of both dice | Clicked the higher and lower buttons fifty times | Dice total showed the total of both dice every time | Pass |
+| Dice Number and Image Match | Dice images to match the numbers below | Clicked the higher and lower buttons fifty times | Dice images were the same as the numbers below every time | Pass |
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
