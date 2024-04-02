@@ -35,7 +35,7 @@ This is the documentation for the Lucky Roll Dice Game website. Built using HTML
     * [Devices Used](#devices-used)
     * [Manual Testing](#manual-testing)
 * [Issues/Bugs](#issues\/bugs)
-    * [Solved Issues](#solved-issues)
+    * [Fixed Issues](#fixed-issues)
     * [Known Bugs](#known-bugs)
 * [Credits](#credits)
     * [Help Used](#help-used)
@@ -371,16 +371,14 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 
 ## Issues/Bugs
 
-### Solved Issues
+### Fixed Issues
 
-| Issue | Details | What Was Done | Fixed? |
-| --- | --- | --- | --- |
-
-******
+| Issue | How It Was Resolved | Fixed? |
+| Total was sometimes displaying incorrect value | Changed currentNumber1 and currentNumber2 variables to read the value of the dice-number divs instead of the inner text | Fixed |
 
 ### Known Bugs
 
-1. 
+No known bugs at this current stage.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -390,7 +388,11 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 
 ### Help Used
 
-[Code Institute]() -
+[Tyler Potts - YouTube (DAY 8 - How to code a Number Game in Javascript)](https://www.youtube.com/watch?v=kMmtRm4P_EE&t=1205s) - For the idea of a higher/Lower game and some of the  Javascript used.
+
+[Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/) - For calculating the total of dice correctly using parseInt and values.
+
+[JavaScript Academy - YouTube (Build Your Own Memory Card Game with HTML, CSS, and JavaScript - Beginner-Friendly Tutorial)](https://www.youtube.com/watch?v=xWdkt6KSirw) - For displaying the dice images using template literal.
 
 ******
 
