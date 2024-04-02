@@ -9,30 +9,39 @@ const currentElem1 = document.getElementById("dice-number1");
 const currentElem2 = document.getElementById("dice-number2");
 const higherLowerBtns = document.getElementsByClassName("higher-lower-btn");
 const resultElem = document.getElementById("result-area");
-let scoreElem = document.getElementById("score");
-let streakElem = document.getElementById("streak");
+const scoreElem = document.getElementById("score");
+const streakElem = document.getElementById("streak");
+const image1 = document.getElementById("dice-image1");
+const image2 = document.getElementById("dice-image2");
+const diceTotal = document.getElementById("dice-total-score");
+const higherBtn = document.getElementById("higher-btn");
+const lowerBtn = document.getElementById("lower-btn");
 
 let streak = 0;
 let score = 0;
-let currentNumber1 = generateRandomDice();
-let currentNumber2 = generateRandomDice();
 
-currentElem1.innerText = currentNumber1;
-currentElem2.innerText = currentNumber2;
-
-document.getElementById("dice-image1").innerHTML = `<img src="assets/images/${currentNumber1}.png" alt="Number ${currentNumber1}">`;
-document.getElementById("dice-image2").innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
+//Starts playGame function when higher or lower button is clicked
 
 
-// Checks DOM content has loaded
+/**
+ * Initialise event listeners once DOM has loaded and calls initialise game function
+ */
 document.addEventListener("DOMContentLoaded", function() {
   initialiseEventListeners();
 });
 
-//Initialise event listeners once DOM has loaded
+/**
+ * Initialise game start by generating numbers, populating number fields and adding event listeners to the game buttons
+ */
 function initialiseEventListeners() {
   startButton.addEventListener("click", startGame);
   resetButton.addEventListener("click", resetGame);
+
+  for (let i = 0; i < higherLowerBtns.length; i++) {
+    higherLowerBtns[i].addEventListener("click", function() {
+      playGame(this.dataset.value);
+    });
+  }
 
   // Enables user to use left and right arrow keys to make choice
   document.addEventListener("keydown", function (event) {
@@ -40,20 +49,40 @@ function initialiseEventListeners() {
         let choice = event.key === "ArrowLeft" ? "lower" : "higher";
         playGame(choice);
     }
-});
+  });
+  initialiseGame();
 }
-// Hides welcome page and displays game interface on Start Game button click
+
+/**
+ * Hides welcome page and displays game interface on Start Game button click
+ */
+function initialiseGame() {
+  const currentNumber1 = generateRandomDice();
+  const currentNumber2 = generateRandomDice();
+
+  currentElem1.innerText = currentNumber1;
+  currentElem2.innerText = currentNumber2;
+
+  image1.innerHTML = `<img src="assets/images/${currentNumber1}.png" alt="Number ${currentNumber1}">`;
+  image2.innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
+}
+
+/**
+ * Hides welcome page and displays game interface on Start Game button click
+ */
 function startGame() {
   welcomePage.classList.add("hide");
   gamePage.classList.remove("hide");
 
-  let startNumber1 = parseInt(document.getElementById("dice-number1").innerText);
-  let startNumber2 = parseInt(document.getElementById("dice-number2").innerText);
+  const startNumber1 = parseInt(currentElem1.innerText);
+  const startNumber2 = parseInt(currentElem2.innerText);
 
-  document.getElementById("dice-total-score").innerText = startNumber1 + startNumber2 ;
+  diceTotal.innerText = startNumber1 + startNumber2 ;
 }
 
-// Hides game interface and displays welcome page on Reset Game button click
+/**
+ * Hides game interface and displays welcome page on Reset Game button click
+ */
 function resetGame() {
   welcomePage.classList.remove("hide");
   gamePage.classList.add("hide");
@@ -65,33 +94,29 @@ function resetGame() {
   streak = 0;
 
   //Generate new numbers on reset and display appropriate dice images
-  let currentNumber1 = generateRandomDice();
-  let currentNumber2 = generateRandomDice();
+  const currentNumber1 = generateRandomDice();
+  const currentNumber2 = generateRandomDice();
 
   parseInt(currentElem1.innerText = currentNumber1);
   parseInt(currentElem2.innerText = currentNumber2);
 
-  let currentTotal = currentNumber1 + currentNumber2;
+  const currentTotal = currentNumber1 + currentNumber2;
 
-  parseInt(document.getElementById("dice-total-score").innerText = currentTotal);
+  diceTotal.innerText = currentTotal;
 
-  document.getElementById("dice-image1").innerHTML = `<img src="assets/images/${currentNumber1}.png" alt="Number ${currentNumber1}">`;
-  document.getElementById("dice-image2").innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
+  image1.innerHTML = `<img src="assets/images/${currentNumber1}.png" alt="Number ${currentNumber1}">`;
+  image2.innerHTML = `<img src="assets/images/${currentNumber2}.png" alt="Number ${currentNumber2}">`;
 }
 
-//Starts playGame function when higher or lower button is clicked
-for (let i = 0; i < higherLowerBtns.length; i++) {
-  higherLowerBtns[i].addEventListener("click", function() {
-    playGame(this.dataset.value);
-  });
-}
-
+/**
+ * Generates new numbers and calculates the new total, compares the new total against the current total and checks the players answer
+ */
 function playGame(choice) {
   // Calculate current total
-  const currentNumber1 = parseInt(document.getElementById("dice-number1").value); // parseInt to ensure is a number
-  const currentNumber2 = parseInt(document.getElementById("dice-number2").value); // parseInt to ensure is a number
+  const currentNumber1 = parseInt(currentElem1.innerText); // parseInt to ensure is a number
+  const currentNumber2 = parseInt(currentElem2.innerText); // parseInt to ensure is a number
 
-  let currentTotal = currentNumber1 + currentNumber2;
+  const currentTotal = currentNumber1 + currentNumber2;
   // Generate new numbers for comparison
   let newNumber1 = generateRandomDice();
   let newNumber2 = generateRandomDice();
@@ -101,21 +126,27 @@ function playGame(choice) {
 
   //Ensures new and current totals are not the same
   while (newTotal === currentTotal) {
-    newTotal = generateRandomDice();
+    newNumber1 = generateRandomDice();
+    newNumber2 = generateRandomDice();
+
+    newTotal = newNumber1 + newNumber2;
   }
 
   //Update new numbers and images
-  parseInt(document.getElementById("dice-number1").innerText = newNumber1);
-  parseInt(document.getElementById("dice-number2").innerText = newNumber2);
+  currentElem1.innerText = newNumber1;
+  currentElem2.innerText = newNumber2;
 
   //Uses generated number to call for image from assets folder and display in dice image divs
-  document.getElementById("dice-image1").innerHTML = `<img src="assets/images/${newNumber1}.png" alt="Number ${newNumber1}">`;
-  document.getElementById("dice-image2").innerHTML = `<img src="assets/images/${newNumber2}.png" alt="Number ${newNumber2}">`;
+  image1.innerHTML = `<img src="assets/images/${newNumber1}.png" alt="Number ${newNumber1}">`;
+  image2.innerHTML = `<img src="assets/images/${newNumber2}.png" alt="Number ${newNumber2}">`;
 
-  parseInt(document.getElementById("dice-total-score").innerText = newTotal);
+  diceTotal.innerText = newTotal;
 
   checkAnswer();
-  //Check if players answer is correct
+
+  /**
+ * Check if players answer is correct. If the current total is smaller than the new total and the player selected higher then player is correct and vice versa
+ */
   function checkAnswer() {
     if((currentTotal < newTotal && choice === "higher") || (currentTotal > newTotal && choice === "lower")) {
       correctAnswer();
@@ -125,6 +156,9 @@ function playGame(choice) {
   }
 }
 
+/**
+ * Runs if the players answer is correct. Updates the score and displays message to the player
+ */
 function correctAnswer() {
   // Correct Answer and score update
   score++;
@@ -136,6 +170,9 @@ function correctAnswer() {
   timeoutFunction();
 }
 
+/**
+ * Runs if the players answer is incorrect. Updates the best streak, resets the score and displays a message to the player
+ */
 function incorrectAnswer() {
   // Incorrect answer and best streak counter
   if (scoreElem.innerText > streakElem.innerText) {
@@ -151,19 +188,23 @@ function incorrectAnswer() {
   timeoutFunction();
 }
 
-// Timeout function for results div to fade out and disable higher/lower buttons to stop player spamming answers and give time for results to fade
+/**
+ * Timeout function for results div to fade out and disable higher/lower buttons to stop player spamming answers and give time for results to fade
+ */
 function timeoutFunction() {
-  document.getElementById("higher-btn").disabled = true;
-  document.getElementById("lower-btn").disabled = true;
+  higherBtn.disabled = true;
+  lowerBtn.disabled = true;
   setTimeout(function () {
     resultElem.classList.add("hide");
     resultElem.classList.remove("correct");
-    document.getElementById("higher-btn").disabled = false;
-    document.getElementById("lower-btn").disabled = false;
+    higherBtn.disabled = false;
+    lowerBtn.disabled = false;
   }, 1000);
 }
 
-// function to generate random dice number
+/**
+ * Generates a random dice number
+ */
 function generateRandomDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
