@@ -4,7 +4,7 @@
 
 <img src="assets/images/screenshots/am-i-responsive.png" alt="UIDev view of the game on various screen sizes showing the game is responsive">
 
-This is the documentation for the Lucku Roll Dice Game website. Built using HTML5, CSS3 and Javascript for the Milestone 2 Project for Code Institutes Web Development Diploma course. 
+This is the documentation for the Lucky Roll Dice Game website. Built using HTML5, CSS3 and Javascript for the Milestone 2 Project for Code Institutes Web Development Diploma course. 
 
 ******
 
@@ -94,18 +94,22 @@ The website is simple and loads with instructions on how to play and a start but
 
 All Wireframes have been created using [Balsamiq](https://balsamiq.com/).
 
-<details><summary>Lucky Roll Dice Game Wireframes</summary>
 
-**Desktop View:**
+**Luck Roll Dice Game Wireframes**
+
+<details><summary>Desktop View</summary>
+
 <img src="assets/images/wireframes/balsamiq-welcome-desktop.png" alt="Desktop view of instruction interface wireframe">
 
 <img src="assets/images/wireframes/balsamiq-game-desktop.png" alt="Desktop view of game interface wireframe">
 
-**Mobile View:**
+</details>
+
+<details><summary>Mobile View</summary>
+
 <img src="assets/images/wireframes/balsamiq-welcome-mobile.png" alt="Mobile view of instruction interface wireframe">
 
 <img src="assets/images/wireframes/balsamiq-game-mobile.png" alt="Mobile view of game interface wireframe">
-
 
 </details>
 
@@ -121,9 +125,9 @@ The wireframes shown here are the ideas for the initial layout of the game. Some
 
 #### Colours
 
-I used a bright wooden style image from: [Pexels] (https://www.pexels.com/photo/brown-wooden-surface-129733/) for the background to replicate the game interface being played on a table.
+I used a bright wooden style image from: [Pexels](https://www.pexels.com/photo/brown-wooden-surface-129733/) for the background to replicate the game interface being played on a table.
 
-**(#1d831d, #082a08)** - I chose these shades of green and added a linear gradient for the container elements to replicate the felt of a poker table.
+**#1d831d, #082a08** - I chose these shades of green and added a linear gradient for the container elements to replicate the felt of a poker table.
 
 **#ffffff** - I chose white for the all text in the game (with the exception of the button text) as it is simple and easy to read with the coloured background.
 
@@ -143,7 +147,7 @@ The 'Open-sans' font has been used for the generic content text of the website. 
 
 ### Navigation
 
-The site has two buttons (Start and Reset) in order to Navigate between the instructions and game interface as required.
+The site has two buttons (Start and Reset) in order to Navigate between the instructions and game interfaces as required.
 
 ### Game Interface
 
@@ -239,7 +243,7 @@ The colours throughout the site have been chosen in order for the site to be lig
 
 [**Pexels**](https://www.pexels.com/) - For background image used.
 
-[**Pixabay**] (https://pixabay.com/) - For the dice stock images used.
+[**Pixabay**](https://pixabay.com/) - For the dice stock images used.
 
 [**UI.Dev**](https://ui.dev/amiresponsive) - To show the website on various screen sizes.
 
@@ -323,19 +327,13 @@ The colours throughout the site have been chosen in order for the site to be lig
 
 ### Lighthouse
 
-The Lighthouse tool in Chrome Dev Tools was used to test the performance, accessibility, best practices and search engine results ranking of the website.
+The Lighthouse tool in Chrome Dev Tools was used to test the performance, accessibility, best practices and search engine results (SEO) ranking of the website.
 
-#### Mobile Results
-
-<details><summary>Game Page</summary>
+<details><summary>Mobile Results</summary>
 <img src="assets/images/lighthouse/lighthouse-mobile.png" alt="Screenshot of Game Page Lighthouse Results for mobile">
 </details>
 
-******
-
-#### Desktop Results
-
-<details><summary>Game Page</summary>
+<details><summary>Desktop Results</summary>
 <img src="assets/images/lighthouse/lighthouse-desktop.png" alt="Screenshot of Game Page Lighthouse Results for desktop">
 </details>
 
@@ -390,7 +388,7 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 
 ### Help Used
 
-[Code Institute] () -
+[Code Institute]() -
 
 ******
 
@@ -398,7 +396,7 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 
 [Pexels](https://www.pexels.com/) - For stock image used for background image.
 
-[Pixabay] (https://pixabay.com/) - For the dice stock images used.
+[Pixabay](https://pixabay.com/) - For the dice stock images used.
 
 [Icon8](https://icons8.com/icon/V9uXXBDWkesz/cycling-mountain-bike-skin-type-3) - For the FavIcon.
 
