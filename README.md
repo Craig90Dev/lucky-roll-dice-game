@@ -364,6 +364,8 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 | Lower Button | Lower logic to run, dice to roll, result to display | Clicked Lower button, checked console message in dev tools | Console message displays "Lower", dice rolled, result displays | Pass |
 | Correct Result | Result element to display "Correct" message | Forced the answer to be correct | Result element displays "Correct" message | Pass |
 | Incorrect Result | Result element to display "Incorrect" message | Forced the answer to be incorrect | Result element displays "Incorrect" message | Pass |
+| Score | Score element to increment by one with each consecutive correct answer, reset to zero on incorrect answer | Played game as normal | Score increased by one for each consecutive correct answer and reset to zero when answer was incorrect | Pass |
+| Best Streak | Best streak to update when score is higher than current best streak | Played game and got scores of three, five and three. | Best streak updated from zero to three, then three to five, then stayed at five | Pass |
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
