@@ -376,6 +376,7 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 ### Fixed Issues
 
 | Issue | How It Was Resolved | Fixed? |
+| --- | --- | --- |
 | Total was sometimes displaying incorrect value | The while statement in the playGame function was incorrect giving the newTotal variable a random number between one and six. The newNumber variables have now been added with the newTotal variable adding these and outputting the correct number | Fixed |
 | JSHint validator showing empty header element | Heading element changed to a paragraph element to solve this | Fixed |
 
