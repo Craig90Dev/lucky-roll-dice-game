@@ -20,9 +20,6 @@ const lowerBtn = document.getElementById("lower-btn");
 let streak = 0;
 let score = 0;
 
-//Starts playGame function when higher or lower button is clicked
-
-
 /**
  * Initialise event listeners once DOM has loaded and calls initialise game function
  */
