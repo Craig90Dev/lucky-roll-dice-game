@@ -1,6 +1,6 @@
 # Lucky Roll Dice Game - ReadME
 
-[Access the live site here.](https://craig90dev.github.io/higher-or-lower/)
+[Access the live site here.](https://craig90dev.github.io/lucky-roll-dice-game/)
 
 <img src="assets/images/screenshots/am-i-responsive.png" alt="UIDev view of the game on various screen sizes showing the game is responsive">
 
@@ -263,7 +263,7 @@ The colours throughout the site have been chosen in order for the site to be lig
 
 1. Log in to [GitHub](https://github.com/).
 
-2. Find the repository for [this project](https://github.com/Craig90Dev/higher-or-lower).
+2. Find the repository for [this project](https://github.com/Craig90Dev/lucky-roll-dice-game).
 
 3. Click on the Settings Link.
 
@@ -281,7 +281,7 @@ The colours throughout the site have been chosen in order for the site to be lig
 
 1. Log in to [GitHub](https://github.com/).
 
-2. Find the repository for [this project](https://github.com/Craig90Dev/higher-or-lower).
+2. Find the repository for [this project](https://github.com/Craig90Dev/lucky-roll-dice-game).
 
 3. Click the Fork button in the top right corner of the screen.
 
@@ -289,7 +289,7 @@ The colours throughout the site have been chosen in order for the site to be lig
 
 1. Log in to [GitHub](https://github.com/).
 
-2. Find the repository for [this project](https://github.com/Craig90Dev/higher-or-lower).
+2. Find the repository for [this project](https://github.com/Craig90Dev/lucky-roll-dice-game).
 
 3. Click the Code button and select whether you would like to clone with HTTPS, SSH or GitHub CLI. Copy the link displayed.
 
