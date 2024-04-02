@@ -374,7 +374,8 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 ### Fixed Issues
 
 | Issue | How It Was Resolved | Fixed? |
-| Total was sometimes displaying incorrect value | Changed currentNumber1 and currentNumber2 variables to read the value of the dice-number divs instead of the inner text | Fixed |
+| Total was sometimes displaying incorrect value | The while statement in the playGame function was incorrect giving the newTotal variable a random number between one and six. The newNumber variables have now been added with the newTotal variable adding these and outputting the correct number | Fixed |
+| JSHint validator showing empty header element | Heading element changed to a paragraph element to solve this | Fixed |
 
 ### Known Bugs
 
@@ -393,6 +394,8 @@ No known bugs at this current stage.
 [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/) - For calculating the total of dice correctly using parseInt and values.
 
 [JavaScript Academy - YouTube (Build Your Own Memory Card Game with HTML, CSS, and JavaScript - Beginner-Friendly Tutorial)](https://www.youtube.com/watch?v=xWdkt6KSirw) - For displaying the dice images using template literal.
+
+[W3schools.com](https://www.w3schools.com/jsref/met_win_settimeout.asp) - For using the setTimeout function
 
 ******
 
