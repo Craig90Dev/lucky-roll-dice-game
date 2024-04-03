@@ -46,6 +46,7 @@ body {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 #start-btn {
@@ -201,12 +202,10 @@ li {
 @media screen and (max-width: 525px) {
   
   #welcome-page-description {
-    height: 600px;
     width: 80%;
   }
   
   #game-page-container {
-    height: 600px;
     width: 80%;
   }
 }
@@ -225,7 +224,8 @@ li {
   
   #welcome-page-description {
     width: 80%;
-    height: 600px;
+    height: 500px;
+    font-size: .8rem;
   }
   
   li {
@@ -240,10 +240,16 @@ li {
   /* Game Page */
   #game-page-container {
     width: 80%;
+    height: 500px;
   }
   
   #dice-image-container {
     flex-direction: column;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
   }
   
   #dice-number-container {
@@ -281,6 +287,17 @@ li {
   #reset-btn {
     margin: 10px auto;
   }
+
+  #result-area {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: x-small;
+    right: 0;
+    width: 30%;
+    margin: 5px 5px;
+  };
 
   /* Utilities */
   .container {
