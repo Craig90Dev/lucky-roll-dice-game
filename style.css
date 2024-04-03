@@ -46,7 +46,6 @@ body {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
 }
 
 #start-btn {
