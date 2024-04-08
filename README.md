@@ -382,7 +382,7 @@ The Mozilla Firefox, Google Chrome and Microsoft Edge browsers were used for tes
 
 ### Known Bugs
 
-No known bugs at this current stage.
+On some browsers the game is not responsive, however, due to time constraints I hope to fix this in future imlementations.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
